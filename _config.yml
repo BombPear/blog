@@ -1,0 +1,377 @@
+# Hexo Configuration
+## Docs: https://hexo.io/docs/configuration.html
+## Source: https://github.com/hexojs/hexo/
+
+# Site
+title: Live My Life
+subtitle: 生活是一种态度
+author: 爆梨
+timezone: 
+
+# Internationalization (i18n) Setting
+language: # At present, only en、cn and tw are supported. You can customize the language，refer to `languages/en.yml`.
+  - cn
+  - en
+  
+langselect:
+  enable: true # If open, it will automatically generation lang-select button.This button can jump in articles in different languages, but the articles must have the same name.
+  options: # langselect button display options
+    en: English
+    cn: 简体中文
+    # tw: 正體中文
+
+
+# URL
+## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
+url: http://yoursite-url      # Note: don't forget to modify the CNAME file to your url
+root: /
+permalink: :lang/:title/
+permalink_defaults:
+
+# CDN Setting
+## Docs: https://www.jsdelivr.com/?docs=gh
+## If Github Pages deploy，you can ues jsdelivr settings
+#
+# jsdelivr:
+#   jsdelivr_url: https://cdn.jsdelivr.net/gh/
+#   github_username: V-Vincen
+
+
+# Custom Setting Start
+
+# Site settings
+SEOTitle: either thin | or die
+email: boomli@foxmail.com
+description: "我的私人博客"
+keyword: "v-vincen,v-vincen,livemylife,IT  blog,Blog"
+header-img: img/header_img/newhome_bg.jpg
+archives-img: img/header_img/archive_bg2.jpg
+
+
+# Favicon settings 网站图标设置
+favicon: img/avatar/roguerabbit.jpg
+
+
+# Signature Setup
+signature: true # show signature
+signature-img: img/signature/bombpear.png
+
+
+# Wave settings
+wave: true
+
+
+# SNS Settings
+RSS: true
+github_username: bombpear
+#twitter_username: V_Vincen_
+# instagram_username: v_vincen_
+# facebook_username:  yourAccount
+# linkedin_username:  yourAccount
+zhihu_username: bombpear
+weibo_username: bombpear
+
+
+# Sidebar Settings
+sidebar: true   # whether or not using Sidebar.
+sidebar-about-description: "知世故却不世故"
+sidebar-avatar: img/avatar/test.jpg    # use absolute URL, seeing it's used in both `/` and `/about/`
+widgets:
+- visitor   # busuanzi: https://busuanzi.ibruce.info/
+- featured-tags
+- short-about
+- recent-posts
+- friends-blog
+- archive
+- category
+
+
+# widget behavior
+## Archive
+archive_type: 'monthly'
+show_count: true
+
+## Featured Tags
+featured-tags: true   # whether or not using Feature-Tags
+featured-condition-size: 0    # A tag will be featured if the size of it is more than this condition value
+
+## Friends
+friends: [
+    {
+        title: "Hexo",
+        href: "https://hexo.io/"
+    }
+]
+
+
+# Comment Settings
+
+## Gitalk Settings
+## Doc:https://github.com/gitalk/gitalk/blob/master/readme-cn.md
+##
+gitalk:
+  owner: BombPear                         # 'GitHub repo owner'
+  admin: BombPear                         # 'GitHub repo'
+  repo:  commit                         # ['GitHub repo owner and collaborators, only these guys can initialize github issues']
+  clientID:    082a6b3f47ed86ee8f0f                   # 'GitHub Application Client ID'
+  clientSecret:  696989bf5ae329d7e30187243480a6e02a88bd02                 # 'GitHub Application Client Secret'
+  perPage: 10                     # Pagination size, with maximum 100.
+  pagerDirection: last            # Comment sorting direction, available values are last and first.
+  createIssueManually: false      # By default, Gitalk will create a corresponding github issue for your every single page automatically when the logined user is belong to the admin users. You can create it manually by setting this option to true
+  language: zh-CN                   # Localization language key, en, zh-CN and zh-TW are currently available.
+  maxCommentHeight: 250           # An optional number to limit comments' max height, over which comments will be folded.Default 250.
+  proxy: https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token  # GitHub oauth request reverse proxy for CORS. For example, the demo url is 'https://cors-anywhere.herokuapp.com/https://github.com/login/oauth/access_token'.You should deploy your own proxy url as in this issue https://github.com/gitalk/gitalk/issues/429.
+
+
+## Gitment Settings
+## Doc:https://github.com/imsun/gitment
+##
+# gitment:
+#   owner:                          # Your GitHub ID. Required.
+#   repo:                           # The repository to store your comments. Make sure you're repo's owner. Required.
+#   client_id:                      # GitHub client ID. Required.
+#   client_secret:                  # GitHub client secret. Required.
+#   desc:                           # An optional description for your page, used in issue's body. Default ''.
+#   perPage: 10                     # An optional number to which comments will be paginated. Default 20.
+#   maxCommentHeight: 250           # An optional number to limit comments' max height, over which comments will be folded. Default 250.
+
+## Disqus settings
+##
+# disqus_username: your-disqus-ID
+
+
+# Analytics settings
+
+## Google Analytics
+ga_track_id: UA-xxxxxx-xx   # Format: UA-xxxxxx-xx
+
+## Baidu Analytics
+ba_track_id: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+## Sitemap
+sitemap:
+  path: sitemap.xml
+
+## Baidusitemap
+baidusitemap:
+    path: baidusitemap.xml
+
+baidu_push: true
+
+# Custom Setting End
+
+
+
+# Directory
+source_dir: source
+public_dir: public
+tag_dir: tags
+archive_dir: archives
+category_dir: categories
+code_dir: downloads/code
+i18n_dir: :lang
+skip_render:
+
+
+# Writing
+new_post_name: :lang/:title.md    # File name of new posts
+default_layout: post
+auto_spacing: true
+titlecase: false    # Transform title into titlecase
+# New option
+# https://hexo.io/docs/configuration.html#Writing
+external_link:
+  enable: true # Open external links in new tab
+  field: site # Apply to the whole site
+  exclude: ''
+filename_case: 0
+render_drafts: false
+post_asset_folder: true
+relative_link: true
+future: true
+highlight:
+  enable: true
+  line_number: true
+  auto_detect: true
+  tab_replace:
+  wrap: true
+  hljs: false
+prismjs:
+  enable: false
+  preprocess: true
+  line_number: true
+  tab_replace: ''
+
+
+# Category & Tag
+default_category: uncategorized
+category_map:
+tag_map:
+home_posts_tag: true    # show posts tags
+
+
+# Date / Time format
+## Hexo uses Moment.js to parse and display date
+## You can customize the date format as defined in
+## http://momentjs.com/docs/#/displaying/format/
+##
+date_format: YYYY-MM-DD
+time_format: HH:mm:ss
+# New option
+# https://hexo.io/docs/configuration#Date-Time-format
+updated_option: date
+
+
+# Pagination
+## Set per_page to 0 to disable pagination
+##
+per_page: 10
+pagination_dir: archives
+
+# hexo-generator-i18n config
+## Docs: https://github.com/xcatliu/hexo-generator-index-i18n
+index_generator:
+  per_page: 10
+  pagination_dir: page
+  path: ''
+  order_by: -date
+
+archive_generator:
+  enabled: false
+  per_page: 10
+  yearly: true
+  monthly: true
+  daily: false
+  order_by: -date
+
+
+# Markdown-it config
+## Docs: https://github.com/celsomiranda/hexo-renderer-markdown-it/wiki
+##
+markdown:
+  render:
+    html: true
+    xhtmlOut: false
+    breaks: true
+    linkify: true
+    typographer: true
+    quotes: '“”‘’'
+
+
+# Build Settings
+anchorjs: true    # if you want to customize anchor. check out line:26 of `anchorjs.ejs`
+
+
+# article top
+top: true
+
+
+# WordCount Settings
+## Dependencies: https://github.com/willin/hexo-wordcount
+## Docs: https://www.npmjs.com/package/hexo-wordcount
+##
+wordcount: true
+
+
+# Busuanzi Settings
+## Dependencies: https://busuanzi.ibruce.info/
+## Docs: https://ibruce.info/
+busuanzi: true
+
+
+# top scroll progress
+scroll: true
+
+
+# Tip
+tip:
+  enable: true
+  # copyright: If you like this blog or find it useful for you, you are welcome to comment on it. You are also welcome to share this blog, so that more people can participate in it. If the images used in the blog infringe your copyright, please contact the author to delete them. Thank you !
+
+
+# Social Share Post
+## Docs:https://github.com/overtrue/share.js
+##
+socialshare: true
+
+
+# Viewer config
+## Docs:https://github.com/fengyuanchen/viewer
+## Demo:https://fengyuanchen.github.io/viewer/
+##
+viewer: true
+
+
+# ThemeColor config
+themecolor:
+  enable: true
+  mode: light # themecolor mode light or dark, default light
+
+
+# Mouseclick config
+mouseclick:
+  enable: true
+  content:
+    - 云想衣裳花想容， 春风拂槛露华浓
+    - 仰天大笑出门去，我辈岂是蓬蒿人
+    - 孤帆远影碧空尽，唯见长江天际流
+    - 十步杀一人 千里不留行
+    - 安能摧眉折腰事权贵，使我不得开心颜
+    - 举杯邀明月，对影成三人 
+    - 凤兮凤兮归故乡 遨游四海求其凰
+    - 抽刀断水水更流，举杯消愁愁更愁
+    - 众里寻他千百度，蓦然回首，那人却在，灯火阑珊处
+  color:
+    - '#9933CC'
+    - '#339933'
+    - '#66CCCC'
+    - '#FF99CC'
+    - '#CCCCFF'
+    - '#6666CC'
+    - '#663399'
+    - '#66CC99'
+    - '#FF0033'
+
+
+# Ribbon config
+ribbonDynamic: true
+
+
+# Line config
+bglinecanvas: false  # The special effects will take up a lot of cpu resorces, please open it carefully.
+
+
+# Search Setting
+## Search: https://go.kieran.top/post/45/
+## Dependencies: https://github.com/V-Vincen/hexo-generator-zip-search
+##
+search:
+  path: search.json
+  zipPath: search.flv
+  versionPath: searchVersion.json
+  field: post
+  trigger: auto   # if 'auto', trigger search by changing input;if 'manual', trigger search by pressing enter key or search button
+  top_n_per_article: 1    # show top n results per article, show all results by setting to -1
+
+
+# Theme config
+## Themes: https://hexo.io/themes/
+##
+theme: livemylife
+
+
+# Gitter
+## Docs:https://gitter.im/?utm_source=left-menu-logo
+##
+gitter:
+  # room: your-community/your-room
+  room: Cliff-seam
+
+
+# Deployment
+## Docs: https://hexo.io/docs/deployment.html
+##
+deploy:
+  type: git
+  repo: https://github.com/BombPear/BombPear.github.io.git 
+  branch: master
