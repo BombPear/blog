@@ -4,6 +4,7 @@ catalog: true
 date: 2020-04-17 02:34:17
 subtitle: 
 lang: cn
+sticky: 10
 header-img: /img/header_img/lml_bg.jpg
 tags:
 - Mysql

@@ -3,6 +3,7 @@ title: MySQL高级-02-索引分析与优化
 catalog: true
 date: 2020-04-17 02:34:17
 subtitle: 
+sticky: 999
 lang: cn
 header-img: /img/header_img/lml_bg.jpg
 tags:
